@@ -1,5 +1,5 @@
 import Card from './Card';
-import { Conquista } from '../types';
+import { type Conquista } from '../types';
 
 interface BadgeProps {
   conquista: Conquista;

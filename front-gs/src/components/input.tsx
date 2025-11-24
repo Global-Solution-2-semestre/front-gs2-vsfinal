@@ -1,11 +1,11 @@
-import { InputHTMLAttributes } from 'react';
+import type { InputHTMLAttributes } from 'react';
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   error?: string;
 }
 
-export function Input({ label, error, className = '', ...props }: InputProps) {
+export default function Input({ label, error, className = '', ...props }: InputProps) {
   return (
     <div className="space-y-2">
       {label && (
