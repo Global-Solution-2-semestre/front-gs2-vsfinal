@@ -75,9 +75,7 @@ npm run dev
 4. Variáveis de ambiente (exemplo)
 Crie .env:
 
-ini
-Copiar código
-VITE_API_URL=https://sua-api-deploy.com
+
 ▶️ Como Usar
 Abra o projeto no navegador em:
 http://localhost:5173
