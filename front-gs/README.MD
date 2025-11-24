@@ -50,12 +50,11 @@ Este sistema compõe a entrega integrada da **Global Solution – FIAP 2025/2**,
 - TailwindCSS (obrigatório)
 - Context API (Tema claro/escuro + autenticação)
 - React Router DOM
-- Fetch API (nativo) – *sem Axios*  
 
 ### **Ferramentas**
 - Git & GitHub (GitFlow)
 - Vercel (Deploy)
-- Figma (Protótipo – opcional)
+- Figma (Protótipo)
 
 ---
 
@@ -63,7 +62,7 @@ Este sistema compõe a entrega integrada da **Global Solution – FIAP 2025/2**,
 
 ### 1. Clone o repositório
 ```sh
-git clone https://github.com/NOME_DO_REPOSITORIO.git
+git clone https://github.com/Global-Solution-2-semestre/front-gs2-vsfinal
 cd NOME_DO_REPOSITORIO
 2. Instale as dependências
 sh
