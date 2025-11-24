@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/UserContext';
-import Header from '../components/Header';
+
 import StatCard from '../components/StatCard';
 import Card from '../components/Card';
 import Button from '../components/Button';
-import { api } from '../services/api';
-import { SessaoFoco, Sentimento } from '../types';
+import { api }  from '../services/api';
+import {type  SessaoFoco, type Sentimento } from '../types';
+import  Header  from '../components/Header';
 
 export default function Dashboard() {
   const navigate = useNavigate();

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Header from '../components/Header';
 import Card from '../components/Card';
 import Badge from '../components/Badge';
-import { Conquista } from '../types';
+import { type Conquista } from '../types';
 
 const Conquistas = () => {
   const [conquistasFiltro, setConquistasFiltro] = useState<'todas' | 'desbloqueadas' | 'bloqueadas'>('todas');

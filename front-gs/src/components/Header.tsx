@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/UserContext';
 
-export function Header() {
+export default function Header() {
   const location = useLocation();
   const { logout } = useAuth();
 

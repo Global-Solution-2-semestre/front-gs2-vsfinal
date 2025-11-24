@@ -1,9 +1,11 @@
+
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/UserContext';
-import { Card } from '../components/card';
-import { Input } from '../components/input';
-import { Button } from '../components/button';
+import Card from '../components/Card';
+import Input  from '../components/input';
+import Button from '../components/Button';
+
 
 export default function Auth() {
   const navigate = useNavigate();

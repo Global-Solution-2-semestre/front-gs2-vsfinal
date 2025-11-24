@@ -5,7 +5,7 @@ import Header from '../components/Header';
 import Card from '../components/Card';
 import Button from '../components/Button';
 import { api } from '../services/api';
-import { SessaoFoco } from '../types';
+import { type SessaoFoco } from '../types';
 
 const Sessoes = () => {
   const navigate = useNavigate();
