@@ -39,10 +39,10 @@ const Landing = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-focus">
+    <div className="min-h-screen bg-gradient-to-b from-purple-50 to-pink-50">
 
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-primary opacity-10 animate-breathe"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-purple-600 opacity-10 animate-breathe"></div>
         
         <div className="relative max-w-6xl mx-auto px-6 py-24">
           <div className="text-center space-y-8">
@@ -50,11 +50,11 @@ const Landing = () => {
               🧠
             </div>
             
-            <h1 className="text-6xl md:text-7xl font-bold text-foreground">
-              Bem-vindo ao <span className="bg-gradient-primary bg-clip-text text-transparent">ZenSoft</span>
+            <h1 className="text-6xl md:text-7xl font-bold text-gray-900 dark:text-gray-100">
+              Bem-vindo ao <span className="bg-gradient-to-r from-purple-500 to-purple-600 bg-clip-text text-transparent">ZenHub</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
               Sua plataforma inteligente para cuidar da saúde mental, aumentar produtividade e cultivar bem-estar no dia a dia profissional
             </p>
 
@@ -75,10 +75,10 @@ const Landing = () => {
       <section id="como-funciona" className="py-24 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-4">
               Como Funciona
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-gray-600 dark:text-gray-400">
               Transforme sua rotina em 4 passos simples
             </p>
           </div>
@@ -91,34 +91,34 @@ const Landing = () => {
               { numero: '4', titulo: 'Evolua', descricao: 'Acompanhe progresso e conquistas' },
             ].map((passo) => (
               <Card key={passo.numero} variant="gradient" className="text-center hover:scale-105 transition-transform">
-                <div className="w-16 h-16 rounded-full bg-gradient-primary text-primary-foreground flex items-center justify-center text-2xl font-bold mx-auto mb-4 animate-pulse-glow">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-purple-600 text-white flex items-center justify-center text-2xl font-bold mx-auto mb-4 animate-pulse-glow">
                   {passo.numero}
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-foreground">{passo.titulo}</h3>
-                <p className="text-muted-foreground">{passo.descricao}</p>
+                <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-gray-100">{passo.titulo}</h3>
+                <p className="text-gray-600 dark:text-gray-400">{passo.descricao}</p>
               </Card>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-24 px-6 bg-card/30">
+      <section className="py-24 px-6 bg-white/30 dark:bg-gray-900/30">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-4">
               Funcionalidades
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-gray-600 dark:text-gray-400">
               Tudo que você precisa para cuidar do seu bem-estar
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature) => (
-              <Card key={feature.title} className="hover:shadow-glow transition-all duration-300">
+              <Card key={feature.title} className="hover:shadow-[0_0_20px_rgba(168,85,247,0.5)] transition-all duration-300">
                 <div className="text-5xl mb-4 animate-float">{feature.icon}</div>
-                <h3 className="text-xl font-bold mb-3 text-foreground">{feature.title}</h3>
-                <p className="text-muted-foreground">{feature.description}</p>
+                <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-gray-100">{feature.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400">{feature.description}</p>
               </Card>
             ))}
           </div>
@@ -128,15 +128,15 @@ const Landing = () => {
       <section className="py-24 px-6">
         <div className="max-w-6xl mx-auto">
           <Card variant="glow" className="text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-8">
               Por que usar o ZenSoft?
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
               <div>
                 <div className="text-4xl mb-4">💼</div>
-                <h3 className="text-xl font-bold mb-3 text-foreground">Para Profissionais</h3>
-                <ul className="space-y-2 text-muted-foreground">
+                <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-gray-100">Para Profissionais</h3>
+                <ul className="space-y-2 text-gray-600 dark:text-gray-400">
                   <li>• Aumente produtividade</li>
                   <li>• Reduza estresse</li>
                   <li>• Melhore foco</li>
@@ -146,8 +146,8 @@ const Landing = () => {
 
               <div>
                 <div className="text-4xl mb-4">🎯</div>
-                <h3 className="text-xl font-bold mb-3 text-foreground">Baseado em Ciência</h3>
-                <ul className="space-y-2 text-muted-foreground">
+                <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-gray-100">Baseado em Ciência</h3>
+                <ul className="space-y-2 text-gray-600 dark:text-gray-400">
                   <li>• Técnica Pomodoro</li>
                   <li>• Mindfulness</li>
                   <li>• Psicologia positiva</li>
@@ -157,8 +157,8 @@ const Landing = () => {
 
               <div>
                 <div className="text-4xl mb-4">📱</div>
-                <h3 className="text-xl font-bold mb-3 text-foreground">Fácil de Usar</h3>
-                <ul className="space-y-2 text-muted-foreground">
+                <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-gray-100">Fácil de Usar</h3>
+                <ul className="space-y-2 text-gray-600 dark:text-gray-400">
                   <li>• Interface intuitiva</li>
                   <li>• Acesso rápido</li>
                   <li>• Sem complexidade</li>
@@ -172,10 +172,10 @@ const Landing = () => {
 
       <section className="py-24 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6">
             Pronto para começar sua jornada?
           </h2>
-          <p className="text-xl text-muted-foreground mb-8">
+          <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
             Junte-se a milhares de profissionais que já cuidam da saúde mental com o ZenSoft
           </p>
           <Button size="lg" onClick={() => navigate('/auth')}>
@@ -184,9 +184,8 @@ const Landing = () => {
         </div>
       </section>
 
-
-      <footer className="border-t border-border py-12 px-6">
-        <div className="max-w-6xl mx-auto text-center text-muted-foreground">
+      <footer className="border-t border-gray-300 dark:border-gray-700 py-12 px-6">
+        <div className="max-w-6xl mx-auto text-center text-gray-600 dark:text-gray-400">
           <p className="text-4xl mb-4">🧠</p>
           <p className="mb-2">© 2025 ZenSoft. Todos os direitos reservados.</p>
           <p className="text-sm">Cuidando do bem-estar mental de profissionais modernos.</p>
