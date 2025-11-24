@@ -1,10 +1,9 @@
-
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/UserContext';
 import Card from '../components/Card';
-import Input  from '../components/input';
 import Button from '../components/Button';
+import Input from '../components/input';
 
 
 export default function Auth() {
@@ -74,7 +73,6 @@ export default function Auth() {
       } else {
         await login(formData.email, formData.senha);
       }
-
       navigate('/dashboard');
     } catch (error: any) {
       setErro(error.message || 'Erro ao processar solicitação');
@@ -84,18 +82,20 @@ export default function Auth() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-focus flex items-center justify-center px-6 py-12">
+    <div className="min-h-screen bg-gradient-to-b from-purple-50 to-pink-50 dark:from-purple-950 dark:to-pink-950 flex items-center justify-center px-6 py-12">
       <div className="w-full max-w-2xl">
+
         <div className="text-center mb-8">
           <div className="text-6xl mb-4 animate-float">🧠</div>
-          <h1 className="text-3xl font-bold text-foreground mb-2">
-            <span className="bg-gradient-primary bg-clip-text text-transparent">ZenSoft</span>
+          <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+            <span className="bg-gradient-to-r from-purple-500 to-purple-600 bg-clip-text ">ZenHub</span>
           </h1>
-          <p className="text-muted-foreground">
+          <p className="text-gray-600 dark:text-gray-400">
             {modo === 'login' ? 'Bem-vindo de volta!' : 'Comece sua jornada de bem-estar'}
           </p>
         </div>
 
+        
         <Card variant="glow">
           <form onSubmit={handleSubmit} className="space-y-6">
             {modo === 'cadastro' && (
@@ -133,11 +133,11 @@ export default function Auth() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Gênero *</label>
+                  <label className="block text-sm font-medium text-gray-900 dark:text-gray-100 mb-2">Gênero *</label>
                   <select
                     value={formData.genero}
                     onChange={(e) => setFormData({ ...formData, genero: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border-2 border-border focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 bg-card text-foreground transition-all duration-300"
+                    className="w-full px-4 py-3 rounded-xl border-2 border-gray-300 dark:border-gray-700 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/20 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-all duration-300"
                     required
                   >
                     <option value="">Selecione...</option>
@@ -189,7 +189,7 @@ export default function Auth() {
             )}
 
             {erro && (
-              <div className="p-4 rounded-xl bg-destructive/10 border border-destructive text-destructive text-sm">
+              <div className="p-4 rounded-xl bg-red-50 dark:bg-red-950 border border-red-500 text-red-600 dark:text-red-400 text-sm">
                 {erro}
               </div>
             )}
@@ -199,6 +199,7 @@ export default function Auth() {
             </Button>
           </form>
 
+          {/* Toggle Mode */}
           <div className="mt-6 text-center">
             <button
               type="button"
@@ -216,21 +217,22 @@ export default function Auth() {
                   telefone: '',
                 });
               }}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
             >
               {modo === 'login' ? (
-                <>Não tem conta? <span className="text-primary font-semibold">Cadastre-se</span></>
+                <>Não tem conta? <span className="text-purple-600 dark:text-purple-400 font-semibold">Cadastre-se</span></>
               ) : (
-                <>Já tem conta? <span className="text-primary font-semibold">Faça login</span></>
+                <>Já tem conta? <span className="text-purple-600 dark:text-purple-400 font-semibold">Faça login</span></>
               )}
             </button>
           </div>
         </Card>
 
+        {/* Back */}
         <div className="mt-6 text-center">
           <button
             onClick={() => navigate('/')}
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
           >
             ← Voltar para página inicial
           </button>
